@@ -1615,7 +1615,7 @@ elif home_page_input == '7':
     print('0. Back')
     user_stage_7 = input('User choice: ')
     if user_stage_7 =='1':
-        print("Y'ello, you have earned 14 points in the MoMo promo. Pay more and send moreto stand a chance of winning exciting e-cash prices.")
+        print("Y'ello, you have earned 14 points in the MoMo promo. Pay more and send more to stand a chance of winning exciting e-cash prices.")
     elif user_stage_7 =='2':
         print('Error occured. Please try after some time')
 

@@ -13,4 +13,4 @@
  ##  -Python 3.8
 
  ## **Installation**
- Clone the repository and open it in an editor. 
+ Clone the repository and open it in any code editor. 

@@ -45,7 +45,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
         repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
         if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-            amount_to_transfer_input = int(input('Enter Amount: '))
+            amount_to_transfer_input = float(input('Enter Amount: '))
             print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))
 
         else: 
@@ -62,7 +62,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
 
     elif transfer_money_screen_input == '2':
         receiver_name_input = input('Enter Receiver Name: ')
-        amount_sent_input = int(input('Enter Amount: '))
+        amount_sent_input = float(input('Enter Amount: '))
         reference_number_input = input('Enter Reference: ')
         secret_code_input = int(input('Enter secret code: '))
         confirm_secret_code_input = int(input('Confirm secret code: '))
@@ -93,7 +93,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
             enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
             repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
             if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                    enter_amount_input = int(input('Please enter Amount: '))
+                    enter_amount_input = float(input('Please enter Amount: '))
                     send_with_care_reference = input('Enter rererence: ')
                     print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
             else:
@@ -102,7 +102,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                     enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
                     repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
                     if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                        enter_amount_input = int(input('Please enter Amount: '))
+                        enter_amount_input = float(input('Please enter Amount: '))
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
@@ -123,7 +123,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                     enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
                     repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
                     if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                        enter_amount_input = int(input('Please enter Amount: '))
+                        enter_amount_input = float(input('Please enter Amount: '))
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
@@ -132,7 +132,7 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                         enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
                         repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
                         if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                            enter_amount_input = int(input('Please enter Amount: '))
+                            enter_amount_input = float(input('Please enter Amount: '))
                             send_with_care_reference = input('Enter rererence: ')
                             print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                         else:
@@ -195,7 +195,7 @@ def other_network_input_result():
         enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
         repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
         if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-            enter_amount_input = int(input('Please enter Amount: '))
+            enter_amount_input = float(input('Please enter Amount: '))
             send_with_care_reference = input('Enter rererence: ')
             print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}'.format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
         else:
@@ -204,7 +204,7 @@ def other_network_input_result():
             enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
             repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
             if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                enter_amount_input = int(input('Please enter Amount: '))
+                enter_amount_input = float(input('Please enter Amount: '))
                 send_with_care_reference = input('Enter rererence: ')
                 print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}'.format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
             else:
@@ -240,7 +240,7 @@ def bank_account_input_result():
     elif bank_account_result_input=='2':
         bank_account_number_input= int(input('Account Number: '))
         
-        bank_amount_input=int(input('Amount: '))
+        bank_amount_input=float(input('Amount: '))
         print("Payment of",bank_amount_input,'Ghana Cedis has sucessfully been tranfered to your mobile wallet form ',bank_account_number_input, 'Thank you')
 
     else:
@@ -350,7 +350,7 @@ def report_fraud_back():
             report_fraud_screen()
             report_fraud_input= input('user choice: ')
             if report_fraud_input=="1":
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('No')
@@ -366,7 +366,7 @@ def report_fraud_back():
                     print('incorrect input')
                     print('Network Timeout')
     elif report_fraud_input =='3':
-        enter_frauster_number = ("enter frauster's number: ")
+        enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
         print("1. Yes")
         print('No')
@@ -383,7 +383,9 @@ def report_fraud_back():
             report_fraud_screen()
             report_fraud_input= input('user choice: ')
             if report_fraud_input=="1":
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
+
+            
                 print('Did you send the money')
                 print("1. Yes")
                 print('No')
@@ -399,7 +401,7 @@ def report_fraud_back():
                     print('incorrect input')
                     print('Network Timeout')
     elif report_fraud_input =='4':
-        enter_frauster_number = ("enter frauster's number: ")
+        enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
         print("1. Yes")
         print('No')
@@ -416,7 +418,7 @@ def report_fraud_back():
             report_fraud_screen()
             report_fraud_input= input('user choice: ')
             if report_fraud_input=="1":
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('No')
@@ -432,7 +434,7 @@ def report_fraud_back():
                     print('incorrect input')
                     print('Network Timeout')
     elif report_fraud_input =='5':
-        enter_frauster_number = ("enter frauster's number: ")
+        enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
         print("1. Yes")
         print('No')
@@ -449,7 +451,7 @@ def report_fraud_back():
             report_fraud_screen()
             report_fraud_input= input('user choice: ')
             if report_fraud_input=="1":
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('No')
@@ -574,8 +576,8 @@ def change_next_of_kin():
         print('Network Timeout')            
 
 
-choose_one_to_buy = " "    
-#def flexi_bundles():
+ 
+
     
 
 
@@ -607,7 +609,7 @@ if home_page_input == "1":
         repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
         if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-            amount_to_transfer_input = int(input('Enter Amount: '))
+            amount_to_transfer_input = float(input('Enter Amount: '))
             print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))
 
         else: 
@@ -617,7 +619,7 @@ if home_page_input == "1":
             repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
             if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-                amount_to_transfer_input = int(input('Enter Amount: '))
+                amount_to_transfer_input = float(input('Enter Amount: '))
                 print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
             else:
                 print("Network Timeout")
@@ -629,7 +631,7 @@ if home_page_input == "1":
 #non_momo_user
     elif transfer_money_screen_input == '2':
         receiver_name_input = input('Enter Receiver Name: ')
-        amount_sent_input = int(input('Enter Amount: '))
+        amount_sent_input = float(input('Enter Amount: '))
         reference_number_input = input('Enter Reference: ')
         secret_code_input = int(input('Enter secret code: '))
         confirm_secret_code_input = int(input('Confirm secret code: '))
@@ -663,7 +665,7 @@ if home_page_input == "1":
             enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number: "))
             repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number: '))
             if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                    enter_amount_input = int(input('Please enter Amount: '))
+                    enter_amount_input = float(input('Please enter Amount: '))
                     send_with_care_reference = input('Enter rererence: ')
                     print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
             else:
@@ -672,7 +674,7 @@ if home_page_input == "1":
                     enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
                     repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
                     if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                        enter_amount_input = int(input('Please enter Amount: '))
+                        enter_amount_input = float(input('Please enter Amount: '))
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
@@ -696,7 +698,7 @@ if home_page_input == "1":
                     enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number: "))
                     repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number: '))
                     if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                        enter_amount_input = int(input('Please enter Amount: '))
+                        enter_amount_input = float(input('Please enter Amount: '))
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
@@ -705,7 +707,7 @@ if home_page_input == "1":
                         enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
                         repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
                         if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                            enter_amount_input = int(input('Please enter Amount: '))
+                            enter_amount_input = float(input('Please enter Amount: '))
                             send_with_care_reference = input('Enter rererence: ')
                             print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                         else:
@@ -1028,7 +1030,7 @@ elif home_page_input =='3':
                     bundle_for_self_input = input('User choice: ')
 
                     if bundle_for_self_input == '1':
-                        enter_amount_to_bundle_for_self_input = input('Enter amount to buy preferred bundle: ')
+                        enter_amount_to_bundle_for_self_input = float(input('Enter amount to buy preferred bundle: '))
                         if enter_amount_to_bundle_for_self_input == "0.5":
                             print("Y'ello the GHC 0.5 Data bundle will give you 24.05 MB")
                             print('This bundle does not expire')
@@ -1243,7 +1245,137 @@ elif home_page_input =='3':
                                 print('Incorrect Input, Cancelled')    
                             
                     elif bundle_for_self_input == '2':
-                        print("Y'ello ")
+                        print("Y'ello The GHS 0.5 Data Bundle will give 24.05 MB.") 
+                        print("This bundle does not expire")
+                        choose_one_to_buy = input('1. Buy: ')
+                        if choose_one_to_buy == '1':
+                            print('Choose Payment Mode')
+                            print('1. Airtime')
+                            print('2. Mobile Money')
+                            choose_payment_mode_input = input('User Choice: ')
+
+                            if choose_payment_mode_input == '1':
+                                print('Your Balance is insufficient to buy this bundle, choose')
+                                print('1. Mobile Money')
+                                print('0. Cancel')
+                                momo_for_bundle_payment = input('User Choice: ')
+                                if momo_for_bundle_payment == "1":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')
+                            elif choose_payment_mode_input == "2":
+                                print('You would soon receive a prompt')
+                            else:
+                                print('cancelled')    
+                        else:
+                            print('Incorrect Input, Cancelled') 
+
+
+                    elif bundle_for_self_input == "3":
+                        print("Y'ello The GHS 1.0 Data Bundle will give 48.10 MB.") 
+                        print("This bundle does not expire")
+                        choose_one_to_buy = input('1. Buy: ')
+                        if choose_one_to_buy == '1':
+                            print('Choose Payment Mode')
+                            print('1. Airtime')
+                            print('2. Mobile Money')
+                            choose_payment_mode_input = input('User Choice: ')
+
+                            if choose_payment_mode_input == '1':
+                                print('Your Balance is insufficient to buy this bundle, choose')
+                                print('1. Mobile Money')
+                                print('0. Cancel')
+                                momo_for_bundle_payment = input('User Choice: ')
+                                if momo_for_bundle_payment == "1":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')
+                            elif choose_payment_mode_input == "2":
+                                print('You would soon receive a prompt')
+                            else:
+                                print('cancelled')    
+                        else:
+                            print('Incorrect Input, Cancelled')
+
+                    elif bundle_for_self_input =='4':
+                        print("Y'ello The GHS 3.0 Data Bundle will give 471.70 MB.") 
+                        print("This bundle does not expire")
+                        choose_one_to_buy = input('1. Buy: ')
+                        if choose_one_to_buy == '1':
+                            print('Choose Payment Mode')
+                            print('1. Airtime')
+                            print('2. Mobile Money')
+                            choose_payment_mode_input = input('User Choice: ')
+
+                            if choose_payment_mode_input == '1':
+                                print('Your Balance is insufficient to buy this bundle, choose')
+                                print('1. Mobile Money')
+                                print('0. Cancel')
+                                momo_for_bundle_payment = input('User Choice: ')
+                                if momo_for_bundle_payment == "1":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')
+                            elif choose_payment_mode_input == "2":
+                                print('You would soon receive a prompt')
+                            else:
+                                print('cancelled')    
+                        else:
+                            print('Incorrect Input, Cancelled') 
+
+                    elif bundle_for_self_input == '5':
+                        print("Y'ello The GHS 10.0 Data Bundle will give 971.82 MB.") 
+                        print("This bundle does not expire")
+                        choose_one_to_buy = input('1. Buy: ')
+                        if choose_one_to_buy == '1':
+                            print('Choose Payment Mode')
+                            print('1. Airtime')
+                            print('2. Mobile Money')
+                            choose_payment_mode_input = input('User Choice: ')
+
+                            if choose_payment_mode_input == '1':
+                                print('Your Balance is insufficient to buy this bundle, choose')
+                                print('1. Mobile Money')
+                                print('0. Cancel')
+                                momo_for_bundle_payment = input('User Choice: ')
+                                if momo_for_bundle_payment == "1":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')
+                            elif choose_payment_mode_input == "2":
+                                print('You would soon receive a prompt')
+                            else:
+                                print('cancelled')    
+                        else:
+                            print('Incorrect Input, Cancelled')
+
+                    elif bundle_for_self_input =='6':
+                        print("Y'ello The GHS 399.00 Data Bundle will give 214.09 MB.") 
+                        print("This bundle does not expire")
+                        choose_one_to_buy = input('1. Buy: ')
+                        if choose_one_to_buy == '1':
+                            print('Choose Payment Mode')
+                            print('1. Airtime')
+                            print('2. Mobile Money')
+                            choose_payment_mode_input = input('User Choice: ')
+
+                            if choose_payment_mode_input == '1':
+                                print('Your Balance is insufficient to buy this bundle, choose')
+                                print('1. Mobile Money')
+                                print('0. Cancel')
+                                momo_for_bundle_payment = input('User Choice: ')
+                                if momo_for_bundle_payment == "1":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')
+                            elif choose_payment_mode_input == "2":
+                                print('You would soon receive a prompt')
+                            else:
+                                print('cancelled')    
+                        else:
+                            print('Incorrect Input, Cancelled')        
+
+
 
 
 
@@ -1311,7 +1443,7 @@ elif home_page_input =='6':
             report_fraud_input= input('user choice: ')
             
             if report_fraud_input=="1":
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('2. No')
@@ -1328,7 +1460,7 @@ elif home_page_input =='6':
                     report_fraud_screen()
                     report_fraud_input= input('user choice: ')
                     if report_fraud_input=="1":
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1344,7 +1476,7 @@ elif home_page_input =='6':
                             print('incorrect input')
                             print('Network Timeout')
                     elif report_fraud_input =='2':
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1361,7 +1493,7 @@ elif home_page_input =='6':
                             report_fraud_screen()
                             report_fraud_input= input('user choice: ')
                             if report_fraud_input=="1":
-                                enter_frauster_number = ("enter frauster's number: ")
+                                enter_frauster_number = int(input("enter frauster's number: "))
                                 print('Did you send the money')
                                 print("1. Yes")
                                 print('No')
@@ -1377,7 +1509,7 @@ elif home_page_input =='6':
                                     print('incorrect input')
                                     print('Network Timeout')
                     elif report_fraud_input =='3':
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1394,7 +1526,7 @@ elif home_page_input =='6':
                             report_fraud_screen()
                             report_fraud_input= input('user choice: ')
                             if report_fraud_input=="1":
-                                enter_frauster_number = ("enter frauster's number: ")
+                                enter_frauster_number = int(input("enter frauster's number: "))
                                 print('Did you send the money')
                                 print("1. Yes")
                                 print('2. No')
@@ -1410,7 +1542,7 @@ elif home_page_input =='6':
                                     print('incorrect input')
                                     print('Network Timeout')
                     elif report_fraud_input =='4':
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1427,7 +1559,7 @@ elif home_page_input =='6':
                             report_fraud_screen()
                             report_fraud_input= input('user choice: ')
                             if report_fraud_input=="1":
-                                enter_frauster_number = ("enter frauster's number: ")
+                                enter_frauster_number = int(input("enter frauster's number: "))
                                 print('Did you send the money')
                                 print("1. Yes")
                                 print('2. No')
@@ -1443,7 +1575,7 @@ elif home_page_input =='6':
                                     print('incorrect input')
                                     print('Network Timeout')
                     elif report_fraud_input =='5':
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1460,7 +1592,7 @@ elif home_page_input =='6':
                             report_fraud_screen()
                             report_fraud_input= input('user choice: ')
                             if report_fraud_input=="1":
-                                enter_frauster_number = ("enter frauster's number: ")
+                                enter_frauster_number = int(input("enter frauster's number: "))
                                 print('Did you send the money')
                                 print("1. Yes")
                                 print('2. No')
@@ -1481,7 +1613,7 @@ elif home_page_input =='6':
                     
 
             elif report_fraud_input =='2':
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('2. No')
@@ -1498,7 +1630,7 @@ elif home_page_input =='6':
                     report_fraud_screen()
                     report_fraud_input= input('user choice: ')
                     if report_fraud_input=="1":
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1515,7 +1647,7 @@ elif home_page_input =='6':
                             print('Network Timeout')
 
             elif report_fraud_input =='3':
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('2. No')
@@ -1532,7 +1664,7 @@ elif home_page_input =='6':
                     report_fraud_screen()
                     report_fraud_input= input('user choice: ')
                     if report_fraud_input=="1":
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1549,7 +1681,7 @@ elif home_page_input =='6':
                             print('Network Timeout')
 
             elif report_fraud_input =='4':
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('2. No')
@@ -1566,7 +1698,7 @@ elif home_page_input =='6':
                     report_fraud_screen()
                     report_fraud_input= input('user choice: ')
                     if report_fraud_input=="1":
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')
@@ -1583,7 +1715,7 @@ elif home_page_input =='6':
                             print('Network Timeout')
 
             elif report_fraud_input =='5':
-                enter_frauster_number = ("enter frauster's number: ")
+                enter_frauster_number = int(input("enter frauster's number: "))
                 print('Did you send the money')
                 print("1. Yes")
                 print('2. No')
@@ -1600,7 +1732,7 @@ elif home_page_input =='6':
                     report_fraud_screen()
                     report_fraud_input= input('user choice: ')
                     if report_fraud_input=="1":
-                        enter_frauster_number = ("enter frauster's number: ")
+                        enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
                         print("1. Yes")
                         print('2. No')

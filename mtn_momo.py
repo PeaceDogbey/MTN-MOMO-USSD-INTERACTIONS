@@ -308,7 +308,7 @@ tv_station =['1. DStv/GOtv','2. Startimes','3. GCNET Payment',
             '0. Back']
 pay_bills =['1. ECG','2. Ghana Water','0. Back']
 
-airtime_or_boundle =['1. Airtime','2. Internet bundle','3. Fixed Broadband','4. Schedule Airtime','0. Back']
+airtime_or_bundle =['1. Airtime','2. Internet bundle','3. Fixed Broadband','4. Schedule Airtime','0. Back']
         
 financial_services=['1. Bank services', '2. Savings','3. Loans','4. Pension and Investment','5. Insurance','6. Trade shares','0. Back']
 enter_frauster_number =' '
@@ -981,15 +981,15 @@ elif home_page_input == '2':
 
 
 elif home_page_input =='3':
-        for airtime_and_boundle in airtime_or_boundle:
-            print(airtime_or_boundle)
-        airtime_boundle_input = input('input choice ')
+        for airtime_and_bundle in airtime_or_bundle:
+            print(airtime_or_bundle)
+        airtime_bundle_input = input('input choice ')
 
 
-        if airtime_boundle_input =='0':
+        if airtime_bundle_input =='0':
           home_page()
 
-        elif airtime_boundle_input == '1':
+        elif airtime_bundle_input == '1':
            print('1. Self')
            print('2. Others')
            print("3. Welcome Back")
@@ -999,9 +999,9 @@ elif home_page_input =='3':
            airtime_input = input('User choice: ')
 
            if airtime_input == '0':
-                for airtime_and_boundle in airtime_or_boundle:
-                    print(airtime_or_boundle)
-                    airtime_boundle_input = input('input choice ')
+                for airtime_and_bundle in airtime_or_bundle:
+                    print(airtime_or_bundle)
+                    airtime_bundle_input = input('input choice ')
 
            elif airtime_input == '1':
                 amount_sent_to_self = float(input('Amount: '))
@@ -1036,6 +1036,18 @@ elif home_page_input =='3':
                 else:
                     print('Number mismatched')
                     print('Cancelled')
+
+        elif airtime_bundle_input == '2':
+            print('Welcome to Bundle Portal. Please select your bundle.')
+            print('1. Buy Data Bundle')
+            print('2. Midnight Bundles')
+            print('3. Kokrokoo Bundle')
+            print('4. Social Media Bundle')
+            print('5. Video Bundles')
+            print('6. IDD Bundles')
+            print('7. More')
+            print('0. Back ')
+            
 
 
 #allow cashout

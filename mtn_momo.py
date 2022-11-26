@@ -304,13 +304,12 @@ def report_fraud_screen():
 
 
 #variable list
-tv_station =['1. DStv/GOtv','2. Startimes','3. GCNET Payment',
-            '0. Back']
-pay_bills =['1. ECG','2. Ghana Water','0. Back']
 
-airtime_or_bundle =['1. Airtime','2. Internet bundle','3. Fixed Broadband','4. Schedule Airtime','0. Back']
+
+
+
         
-financial_services=['1. Bank services', '2. Savings','3. Loans','4. Pension and Investment','5. Insurance','6. Trade shares','0. Back']
+
 enter_frauster_number =' '
 
 def report_fraud_back():
@@ -575,48 +574,9 @@ def change_next_of_kin():
         print('Network Timeout')            
 
 
+choose_one_to_buy = " "    
+#def flexi_bundles():
     
-
-
-
-
-
-
-
-       
-              
-       
-            
-      
-                       
-
-
-            
-           
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
 
 
 
@@ -941,15 +901,18 @@ elif home_page_input == '2':
 
 
         if pay_bills_input == '1':
-            for paybill in pay_bills:
-                print(paybill)
-
+            print('1. ECG') 
+            print('2. Ghana Water') 
+            print('0. Back')
             paybills_result_input= input('user choice: ')
 
+
         elif pay_bills_input == '2':
-            for tv_station in tv_station:
-                print(tv_station)
-                tv_entertainament_input=input('user choice: ')
+            print('1. DStv/GOtv') 
+            print('2. Startimes') 
+            print('3. GCNET Payment')
+            print('0. Back')
+            tv_entertainament_input=input('user choice: ')
         
             
 
@@ -981,8 +944,11 @@ elif home_page_input == '2':
 
 
 elif home_page_input =='3':
-        for airtime_and_bundle in airtime_or_bundle:
-            print(airtime_or_bundle)
+        print('1. Airtime') 
+        print('2. Internet bundle') 
+        print('3. Fixed Broadband') 
+        print('4. Schedule Airtime')
+        print('0. Back')
         airtime_bundle_input = input('input choice ')
 
 
@@ -998,16 +964,12 @@ elif home_page_input =='3':
            self =' '
            airtime_input = input('User choice: ')
 
-           if airtime_input == '0':
-                for airtime_and_bundle in airtime_or_bundle:
-                    print(airtime_or_bundle)
-                    airtime_bundle_input = input('input choice ')
-
-           elif airtime_input == '1':
+        
+           if airtime_input == '1':
                 amount_sent_to_self = float(input('Amount: '))
                 print('Payment made for airtime of',amount_sent_to_self,'Ghana Cedis has been sent to',self,'. Should the Transaction be continued')
-                yes = input('1. Yes: ')
-                no = input('2. No')
+                print('1. Yes')
+                print('2. No')
                 yes_no_input = input('User choice: ')
                 if yes_no_input == '1':
                     print('Payment for airtime of',amount_sent_to_self,'has been made to',self,'Thank you.')
@@ -1046,8 +1008,255 @@ elif home_page_input =='3':
             print('5. Video Bundles')
             print('6. IDD Bundles')
             print('7. More')
-            print('0. Back ')
-            
+            print('0. Back')
+            bundle_portal_input = input('User Choice: ')
+
+            if bundle_portal_input == '1':
+                print('Please enter your choice')
+                print('1. Buy for self')
+                print('2. Buy for others')
+                buy_data_bundle_input =('User choice: ')
+
+                if buy_data_bundle_input == '1':
+                    print('1. Flexi bundle(GHC 0.03 - 399)')
+                    print('2. GHC 0.5 (24.05 MB)')
+                    print('3. GHC1 (48.10 MB)')
+                    print('4. GHC 3 (471.70 MB)')
+                    print('5. GHC 10 (971.82 MB)')
+                    print('6. GHC 399 (214.09 GB)')
+                    print('0. Back')
+                    bundle_for_self_input = input('User choice: ')
+
+                    if bundle_for_self_input == '1':
+                        enter_amount_to_bundle_for_self_input = input('Enter amount to buy preferred bundle: ')
+                        if enter_amount_to_bundle_for_self_input == "0.5":
+                            print("Y'ello the GHC 0.5 Data bundle will give you 24.05 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+
+                        elif enter_amount_to_bundle_for_self_input == "0.6":
+                            print("Y'ello the GHC 0.6 Data bundle will give you 24.55 MB") 
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+
+                        elif enter_amount_to_bundle_for_self_input == '1':
+                            print("Y'ello the GHC 1.0 Data bundle will give you 48.1 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+
+                        elif enter_amount_to_bundle_for_self_input == '1.5':
+                            print("Y'ello the GHC 1.5 Data bundle will give you 50 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+                    
+                        elif enter_amount_to_bundle_for_self_input == '2':
+                            print("Y'ello the GHC 2.0 Data bundle will give you 50.55 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+
+                        elif enter_amount_to_bundle_for_self_input == '3':
+                            print("Y'ello the GHC 3.0 Data bundle will give you 471.70 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+
+                        elif enter_amount_to_bundle_for_self_input == '10':
+                            print("Y'ello the GHC 10.0 Data bundle will give you 971.82 MB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+
+                        elif enter_amount_to_bundle_for_self_input == '339':
+                            print("Y'ello the GHC 399.0 Data bundle will give you 214.09 GB")
+                            print('This bundle does not expire')
+                            choose_one_to_buy = input('1. Buy: ')
+                            if choose_one_to_buy == '1':
+                                print('Choose Payment Mode')
+                                print('1. Airtime')
+                                print('2. Mobile Money')
+                                choose_payment_mode_input = input('User Choice: ')
+
+                                if choose_payment_mode_input == '1':
+                                    print('Your Balance is insufficient to buy this bundle, choose')
+                                    print('1. Mobile Money')
+                                    print('0. Cancel')
+                                    momo_for_bundle_payment = input('User Choice: ')
+                                    if momo_for_bundle_payment == "1":
+                                        print('You would soon receive a prompt')
+                                    else:
+                                        print('cancelled')
+                                elif choose_payment_mode_input == "2":
+                                    print('You would soon receive a prompt')
+                                else:
+                                    print('cancelled')    
+                            else:
+                                print('Incorrect Input, Cancelled')    
+                            
+                    elif bundle_for_self_input == '2':
+                        print("Y'ello ")
+
+
+
+
+
+
+ 
+
+
+
+
+
+                
 
 
 #allow cashout
@@ -1057,18 +1266,23 @@ elif home_page_input == '4':
    
 #financial services
 elif home_page_input == '5':
-    for financial_sevice in financial_services:
-        print(financial_sevice)
-        financial_services_input = input('input choice: ')
+    print('1. Bank services') 
+    print('2. Savings') 
+    print('3. Loans') 
+    print('4. Pension and Investment') 
+    print('5. Insurance') 
+    print('6. Trade shares') 
+    print('0. Back')
+    financial_services_input = input('input choice: ')
        
 
-        if financial_services_input== '1':
-            print('1. Transfer to Bank')
-            print('2. Transfer from Bank')
-            print('3. ATM Cashout')
-            print('4. Card Services')
-            print('0. Back')
-            bank_services_input = input('User choice: ')
+    if financial_services_input== '1':
+        print('1. Transfer to Bank')
+        print('2. Transfer from Bank')
+        print('3. ATM Cashout')
+        print('4. Card Services')
+        print('0. Back')
+        bank_services_input = input('User choice: ')
 
 
     else:

@@ -1,5 +1,9 @@
-#Functions
+import time
+from datetime import datetime
+start_time = datetime.now()
 
+
+#Functions
 
 send_with_care_screen_input = " "
 def home_page():
@@ -57,8 +61,12 @@ def send_with_care_screen_0 (transfer_money_screen_input):
             if enter_number_to_transfer_money == repeat_number_to_transfer_money:
                 amount_to_transfer_input = float(input('Enter Amount: '))
                 print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
-            else:
-                print("Network Timeout")
+
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
 
     elif transfer_money_screen_input == '2':
         receiver_name_input = input('Enter Receiver Name: ')
@@ -83,7 +91,12 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                 print(reference_number_input)
                 print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
             else:
-                print("Network Timeout")
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
  
     elif transfer_money_screen_input == '3':
         send_with_care_screen()
@@ -106,7 +119,13 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
+
         elif send_with_care_screen_input =='2':           
             print('This feature is temporaily unavailable')
             go_back_screen()
@@ -136,7 +155,14 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                             send_with_care_reference = input('Enter rererence: ')
                             print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                         else:
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+
+                            
+
                 elif send_with_care_screen_input =='2':           
                     print('This feature is temporaily unavailable')
                     go_back_screen()
@@ -145,7 +171,14 @@ def send_with_care_screen_0 (transfer_money_screen_input):
                     if go_back == '1':
                         print('Thank you very much of Choosing MTN.')
                     else:
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = current_time - start_time
+                        minutes_diff = time_diff * 60
+                        if minutes_diff >= 3:
+                            print("Network Timeout")
+
+                        
+
                 elif send_with_care_screen_input == '3':
                    send_with_care_screen_3 ()
                    send_with_care_input_3_screen()
@@ -208,7 +241,12 @@ def other_network_input_result():
                 send_with_care_reference = input('Enter rererence: ')
                 print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}'.format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
             else:
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
 
 
 
@@ -303,11 +341,6 @@ def report_fraud_screen():
 
 
 
-#variable list
-
-
-
-
         
 
 enter_frauster_number =' '
@@ -331,7 +364,12 @@ def report_fraud_back():
             report_fraud_screen()
         else:
             print('incorrect input')
-            print('Network Timeout')
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
+
     elif report_fraud_input =='2':
         enter_frauster_number = ("enter frauster's number: ")
         print('Did you send the money')
@@ -364,7 +402,12 @@ def report_fraud_back():
                     report_fraud_screen()
                 else:
                     print('incorrect input')
-                    print('Network Timeout')
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                        print("Network Timeout")
+
     elif report_fraud_input =='3':
         enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
@@ -399,7 +442,12 @@ def report_fraud_back():
                     report_fraud_screen()
                 else:
                     print('incorrect input')
-                    print('Network Timeout')
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                        print("Network Timeout")
+
     elif report_fraud_input =='4':
         enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
@@ -432,7 +480,12 @@ def report_fraud_back():
                     report_fraud_screen()
                 else:
                     print('incorrect input')
-                    print('Network Timeout')
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                        print("Network Timeout")
+
     elif report_fraud_input =='5':
         enter_frauster_number = int(input("enter frauster's number: "))
         print('Did you send the money')
@@ -465,9 +518,19 @@ def report_fraud_back():
                     report_fraud_screen()
                 else:
                     print('incorrect input')
-                    print('Network Timeout')
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                        print("Network Timeout")
+
     else:
-        print('Network Timeout')
+        current_time = datetime.now()
+        time_diff = (current_time - start_time).seconds/60
+    
+        if time_diff >= 1:
+            print("Network Timeout")
+
 
 def self_reset_input_screen():
     global self_pin_reset_input 
@@ -519,7 +582,12 @@ def self_reset_input_screen():
             elif self_pin_reset_input== '4':
                 print('You do not have recovery number')
             else: 
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
                 
 
 
@@ -532,7 +600,12 @@ def self_reset_input_screen():
                    enter_new_mm_pin_code_input = input('Enter New MM Pin Code: ')
                    print('Pin Code has Successfully been changed, Thank You.')
         else: 
-            print('Network Timeout')
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
+
 
             
     
@@ -569,11 +642,28 @@ def change_next_of_kin():
                 elif confirm_new_next_of_kin =='2':
                     print('cancelled')
                 else:
-                    print("Network Timeout")
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                       print("Network Timeout")
+                    
+                    
+
             else:
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                   print("Network Timeout")
+
     else:
-        print('Network Timeout')            
+        current_time = datetime.now()
+        time_diff = (current_time - start_time).seconds/60
+    
+        if time_diff >= 1:
+            print("Network Timeout")
+            
 
 
  
@@ -603,61 +693,83 @@ if home_page_input == "1":
     transfer_money_screen()
     transfer_money_screen_input = input('Select choice: ')
 
-#momo_user
-    if transfer_money_screen_input == '1':
-        enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
-        repeat_number_to_transfer_money =int(input('Confirm Number: '))
+    current_time = datetime.now()
+    time_diff = (current_time - start_time).seconds/60
+    
+    if time_diff >= 1:
+        print("Network Timeout")
+        
 
-        if enter_number_to_transfer_money == repeat_number_to_transfer_money:
+    
+    else:
+
+
+       if transfer_money_screen_input == '1':
+           enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
+           repeat_number_to_transfer_money =int(input('Confirm Number: '))
+
+           if enter_number_to_transfer_money == repeat_number_to_transfer_money:
             amount_to_transfer_input = float(input('Enter Amount: '))
             print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))
 
-        else: 
-            print('Number Mismatched, Try Again')
-            
-            enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
-            repeat_number_to_transfer_money =int(input('Confirm Number: '))
-
-            if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-                amount_to_transfer_input = float(input('Enter Amount: '))
-                print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
-            else:
+           else: 
+              print('Number Mismatched, Try Again')
+              current_time = datetime.now()
+              time_diff = (current_time - start_time).seconds/60
+    
+              if time_diff >= 1:
                 print("Network Timeout")
 
+              
 
+              else:
+                   enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
+                   repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
+                   if enter_number_to_transfer_money == repeat_number_to_transfer_money:
+                       amount_to_transfer_input = float(input('Enter Amount: '))
+                       print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
+                       current_time = datetime.now()
+                       time_diff = (current_time - start_time).seconds/60
+    
+                       if time_diff >= 1:
+                           print("Network Timeout")
 
-
-#non_momo_user
-    elif transfer_money_screen_input == '2':
-        receiver_name_input = input('Enter Receiver Name: ')
-        amount_sent_input = float(input('Enter Amount: '))
-        reference_number_input = input('Enter Reference: ')
-        secret_code_input = int(input('Enter secret code: '))
-        confirm_secret_code_input = int(input('Confirm secret code: '))
-
-        if secret_code_input == confirm_secret_code_input:
-            print(receiver_name_input)
-            print(amount_sent_input)
-            print(reference_number_input)
-            print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
-        else:
-            print('Secret code mismatch')
-            print('Please Try Again')
+                     
+       elif transfer_money_screen_input == '2':
+            receiver_name_input = input('Enter Receiver Name: ')
+            amount_sent_input = float(input('Enter Amount: '))
+            reference_number_input = input('Enter Reference: ')
             secret_code_input = int(input('Enter secret code: '))
             confirm_secret_code_input = int(input('Confirm secret code: '))
+
             if secret_code_input == confirm_secret_code_input:
                 print(receiver_name_input)
                 print(amount_sent_input)
                 print(reference_number_input)
                 print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
             else:
-                print("Network Timeout")
+                print('Secret code mismatch')
+                print('Please Try Again')
+                secret_code_input = int(input('Enter secret code: '))
+                confirm_secret_code_input = int(input('Confirm secret code: '))
+                if secret_code_input == confirm_secret_code_input:
+                    print(receiver_name_input)
+                    print(amount_sent_input)
+                    print(reference_number_input)
+                    print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                else:
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                       print("Network Timeout")
+
 
 
 
  #send_with_care
-    elif transfer_money_screen_input == '3':
+       elif transfer_money_screen_input == '3':
         send_with_care_screen()
         send_with_care_screen_input = input('User Choice: ')
 
@@ -678,7 +790,12 @@ if home_page_input == "1":
                         send_with_care_reference = input('Enter rererence: ')
                         print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                     else:
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
 
 
 
@@ -711,7 +828,13 @@ if home_page_input == "1":
                             send_with_care_reference = input('Enter rererence: ')
                             print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
                         else:
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
+
                 elif send_with_care_screen_input =='2':
                     print('This feature is temporaily unavailable')
 
@@ -721,7 +844,12 @@ if home_page_input == "1":
                     if go_back == '1':
                         print('Thank you very much of Choosing MTN.')
                     elif go_back == '0':
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
                 elif send_with_care_screen_input == '3':
                     send_with_care_screen_3()
                     send_with_care_screen_3_input = input('user choice: ') 
@@ -769,7 +897,7 @@ if home_page_input == "1":
        
                         
 #Favourites
-    elif transfer_money_screen_input == '4':
+       elif transfer_money_screen_input == '4':
         print('Favourites') 
         print('1. Name')
         print('2. Find')
@@ -799,13 +927,17 @@ if home_page_input == "1":
             elif favourite_screen_input =='0':
                 transfer_money_screen()
             else:
-                print('Network Timeout')
+                
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
     
+                if time_diff >= 1:
+                    print("Network Timeout")
 
 
 
 #other networks
-    elif transfer_money_screen_input == '5':
+       elif transfer_money_screen_input == '5':
         other_network_screen()
         other_networks_screen_input =input('user choice: ')
         if other_networks_screen_input =='1':
@@ -835,9 +967,19 @@ if home_page_input == "1":
             elif other_networks_screen_input =='6':
                 other_network_input_result()
             elif other_networks_screen_input == '0':
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
             else:
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
         else:
             print('Incorrect Input')
             print('Please Try Again')
@@ -855,30 +997,40 @@ if home_page_input == "1":
             elif other_networks_screen_input =='6':
                 other_network_input_result()
             elif other_networks_screen_input == '0':
-                print('Network timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
             else:
-                print('Network Timeout')
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+
 
 
 #Bank Account
-    elif transfer_money_screen_input== '6':
-        bank_account_screen()
-        bank_accout_screen_input = input('User choice: ')
-        if bank_accout_screen_input == '1':
-            print('Assess Bank')
-            bank_account_input_result()
-        elif bank_accout_screen_input == '2':
-            print('Zennith Bank')
-            bank_account_input_result()
-        elif bank_accout_screen_input == '3':
-            print('CAl Bank')
-            bank_account_input_result()    
+       elif transfer_money_screen_input== '6':
+            bank_account_screen()
+            bank_accout_screen_input = input('User choice: ')
+            if bank_accout_screen_input == '1':
+                print('Assess Bank')
+                bank_account_input_result()
+            elif bank_accout_screen_input == '2':
+                print('Zennith Bank')
+                bank_account_input_result()
+            elif bank_accout_screen_input == '3':
+                print('CAl Bank')
+                bank_account_input_result()    
 
             
 
             
 #Back
-    elif transfer_money_screen_input == '0':
+       elif transfer_money_screen_input == '0':
         home_page()
         home_page_input=input('user choice: ')
  
@@ -887,7 +1039,6 @@ if home_page_input == "1":
 
 
 #momo pay
-
 elif home_page_input == '2':
     momopay_paybill()
     momo_pay_input =input("input choice: ")
@@ -1474,7 +1625,12 @@ elif home_page_input =='6':
                             report_fraud_back()
                         else:
                             print('incorrect input')
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+
                     elif report_fraud_input =='2':
                         enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
@@ -1507,7 +1663,12 @@ elif home_page_input =='6':
                                     report_fraud_back()
                                 else:
                                     print('incorrect input')
-                                    print('Network Timeout')
+                                    current_time = datetime.now()
+                                    time_diff = (current_time - start_time).seconds/60
+    
+                                    if time_diff >= 1:
+                                       print("Network Timeout")
+
                     elif report_fraud_input =='3':
                         enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
@@ -1540,7 +1701,12 @@ elif home_page_input =='6':
                                     report_fraud_back()
                                 else:
                                     print('incorrect input')
-                                    print('Network Timeout')
+                                    current_time = datetime.now()
+                                    time_diff = (current_time - start_time).seconds/60
+    
+                                    if time_diff >= 1:
+                                       print("Network Timeout")
+
                     elif report_fraud_input =='4':
                         enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
@@ -1573,7 +1739,12 @@ elif home_page_input =='6':
                                     report_fraud_back()
                                 else:
                                     print('incorrect input')
-                                    print('Network Timeout')
+                                    current_time = datetime.now()
+                                    time_diff = (current_time - start_time).seconds/60
+    
+                                    if time_diff >= 1:
+                                       print("Network Timeout")
+
                     elif report_fraud_input =='5':
                         enter_frauster_number = int(input("enter frauster's number: "))
                         print('Did you send the money')
@@ -1606,9 +1777,19 @@ elif home_page_input =='6':
                                     report_fraud_back()
                                 else:
                                     print('incorrect input')
-                                    print('Network Timeout')
+                                    current_time = datetime.now()
+                                    time_diff = (current_time - start_time).seconds/60
+    
+                                    if time_diff >= 1:
+                                       print("Network Timeout")
+
                     else:
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
                     
                     
 
@@ -1644,7 +1825,11 @@ elif home_page_input =='6':
                             report_fraud_back()
                         else:
                             print('incorrect input')
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
 
             elif report_fraud_input =='3':
                 enter_frauster_number = int(input("enter frauster's number: "))
@@ -1678,7 +1863,12 @@ elif home_page_input =='6':
                             report_fraud_back()
                         else:
                             print('incorrect input')
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = current_time - start_time
+                            minutes_diff = time_diff * 60
+                            if minutes_diff >= 3:
+                                print("Network Timeout")
+
 
             elif report_fraud_input =='4':
                 enter_frauster_number = int(input("enter frauster's number: "))
@@ -1711,8 +1901,12 @@ elif home_page_input =='6':
                         elif did_you_send =='0':
                             report_fraud_back()
                         else:
-                            print('incorrect input')
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+
 
             elif report_fraud_input =='5':
                 enter_frauster_number = int(input("enter frauster's number: "))
@@ -1746,7 +1940,14 @@ elif home_page_input =='6':
                             report_fraud_back()
                         else:
                             print('incorrect input')
-                            print('Network Timeout')
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+                            
+                            
+
 
             elif report_fraud_input =='0':
                 my_wallet()
@@ -1799,7 +2000,12 @@ elif home_page_input =='6':
                             print('0. Back')
                             self_reset_input_screen()
                         else:
-                            print("Network Timeout")
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+
 
                 else:
                     print('Incorrect Input, please choose correct')
@@ -1844,7 +2050,12 @@ elif home_page_input =='6':
                                     print('0. Back')
                                     self_reset_input_screen()
                                 else:
-                                    print("Network Timeout")
+                                    current_time = datetime.now()
+                                    time_diff = (current_time - start_time).seconds/60
+    
+                                    if time_diff >= 1:
+                                        print("Network Timeout")
+
 
 
 
@@ -1864,7 +2075,12 @@ elif home_page_input =='6':
                 if reversal_of_airtime_input =='1':
                     print("Y'ello, kindly not that 0555728522 does not have enough airtime to fulfill your reversal request of GHC 15.00.")
                 else:
-                   print('Network Timeout')
+                   current_time = datetime.now()
+                   time_diff = (current_time - start_time).seconds/60
+    
+                   if time_diff >= 1:
+                       print("Network Timeout")
+
 
 
         elif my_wallet_input == '8':
@@ -1893,7 +2109,12 @@ elif home_page_input =='6':
                         my_wallet_favourite_enter_pin = input('Enter MM Pin Code: ')
                         print('New name was added successfully' )
                     else:
-                        print('Network Timeout') 
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+ 
             elif my_wallet_favourite_input =='2':
                 print('currently not available')
 
@@ -1934,9 +2155,19 @@ elif home_page_input =='6':
                         elif confirm_new_next_of_kin =='2':
                             print('cancelled')
                         else:
-                            print("Network Timeout")
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+
                     else:
-                        print('Network Timeout')
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+
 
             else:
                 print('Incorrect input, please try again')

@@ -688,8 +688,14 @@ def change_next_of_kin():
          
 home_page()
 home_page_input = input("select choice: ")
+current_time = datetime.now()
+time_diff = (current_time - start_time).seconds/60
+    
+if time_diff >= 1:
+    print("Network Timeout")
 
-if home_page_input == "1":
+else:
+    home_page_input == "1"
     transfer_money_screen()
     transfer_money_screen_input = input('Select choice: ')
 
@@ -706,11 +712,25 @@ if home_page_input == "1":
 
        if transfer_money_screen_input == '1':
            enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
-           repeat_number_to_transfer_money =int(input('Confirm Number: '))
+           current_time = datetime.now()
+           time_diff = (current_time - start_time).seconds/60
+           if time_diff >= 1:
+                print("Network Timeout")
+           else:     
+                repeat_number_to_transfer_money =int(input('Confirm Number: '))
+
+    
+
 
            if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-            amount_to_transfer_input = float(input('Enter Amount: '))
-            print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))
+                amount_to_transfer_input = float(input('Enter Amount: '))
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
+                else:
+                   print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))
 
            else: 
               print('Number Mismatched, Try Again')
@@ -724,46 +744,78 @@ if home_page_input == "1":
 
               else:
                    enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
-                   repeat_number_to_transfer_money =int(input('Confirm Number: '))
-
-                   if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-                       amount_to_transfer_input = float(input('Enter Amount: '))
-                       print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
-                       current_time = datetime.now()
-                       time_diff = (current_time - start_time).seconds/60
+                   current_time = datetime.now()
+                   time_diff = (current_time - start_time).seconds/60
     
-                       if time_diff >= 1:
-                           print("Network Timeout")
+                   if time_diff >= 1:
+                        print("Network Timeout")
+                   else:
+                       repeat_number_to_transfer_money =int(input('Confirm Number: '))
+
+                       if enter_number_to_transfer_money == repeat_number_to_transfer_money:
+                            amount_to_transfer_input = float(input('Enter Amount: '))
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 1:
+                               print("Network Timeout")
+                            else:  
+                                print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
+                                
 
                      
        elif transfer_money_screen_input == '2':
             receiver_name_input = input('Enter Receiver Name: ')
-            amount_sent_input = float(input('Enter Amount: '))
-            reference_number_input = input('Enter Reference: ')
-            secret_code_input = int(input('Enter secret code: '))
-            confirm_secret_code_input = int(input('Confirm secret code: '))
-
-            if secret_code_input == confirm_secret_code_input:
-                print(receiver_name_input)
-                print(amount_sent_input)
-                print(reference_number_input)
-                print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
             else:
-                print('Secret code mismatch')
-                print('Please Try Again')
-                secret_code_input = int(input('Enter secret code: '))
-                confirm_secret_code_input = int(input('Confirm secret code: '))
-                if secret_code_input == confirm_secret_code_input:
-                    print(receiver_name_input)
-                    print(amount_sent_input)
-                    print(reference_number_input)
-                    print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                amount_sent_input = float(input('Enter Amount: '))
+                current_time = datetime.now()
+                time_diff = (current_time - start_time).seconds/60
+    
+                if time_diff >= 1:
+                    print("Network Timeout")
                 else:
+                    reference_number_input = input('Enter Reference: ')
                     current_time = datetime.now()
                     time_diff = (current_time - start_time).seconds/60
     
                     if time_diff >= 1:
-                       print("Network Timeout")
+                        print("Network Timeout")
+                    else:
+                        secret_code_input = int(input('Enter secret code: '))
+                        current_time = datetime.now()
+                        time_diff = (current_time - start_time).seconds/60
+    
+                        if time_diff >= 1:
+                            print("Network Timeout")
+                        else:
+                            confirm_secret_code_input = int(input('Confirm secret code: '))
+
+                        if secret_code_input == confirm_secret_code_input:
+                            print(receiver_name_input)
+                            print(amount_sent_input)
+                            print(reference_number_input)
+                            print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                        else:
+                            print('Secret code mismatch')
+                            print('Please Try Again')
+                            secret_code_input = int(input('Enter secret code: '))
+                            confirm_secret_code_input = int(input('Confirm secret code: '))
+                            if secret_code_input == confirm_secret_code_input:
+                               print(receiver_name_input)
+                               print(amount_sent_input)
+                               print(reference_number_input)
+                               print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                            else:
+                                current_time = datetime.now()
+                                time_diff = (current_time - start_time).seconds/60
+    
+                                if time_diff >= 0.03:
+                                    print("Network Timeout")
 
 
 

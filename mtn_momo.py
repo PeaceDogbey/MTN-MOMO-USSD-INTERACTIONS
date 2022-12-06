@@ -795,27 +795,31 @@ else:
                         else:
                             confirm_secret_code_input = int(input('Confirm secret code: '))
 
-                        if secret_code_input == confirm_secret_code_input:
-                            print(receiver_name_input)
-                            print(amount_sent_input)
-                            print(reference_number_input)
-                            print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
-                        else:
-                            print('Secret code mismatch')
-                            print('Please Try Again')
-                            secret_code_input = int(input('Enter secret code: '))
-                            confirm_secret_code_input = int(input('Confirm secret code: '))
                             if secret_code_input == confirm_secret_code_input:
-                               print(receiver_name_input)
-                               print(amount_sent_input)
-                               print(reference_number_input)
-                               print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                                print(receiver_name_input)
+                                print(amount_sent_input)
+                                print(reference_number_input)
+                                print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
                             else:
+                                print('Secret code mismatch')
+                                print('Please Try Again')
+                                secret_code_input = int(input('Enter secret code: '))
                                 current_time = datetime.now()
                                 time_diff = (current_time - start_time).seconds/60
     
-                                if time_diff >= 0.03:
+                                if time_diff >= 1:
                                     print("Network Timeout")
+                                else:
+                                    confirm_secret_code_input = int(input('Confirm secret code: '))
+
+                                    if secret_code_input == confirm_secret_code_input:
+                                        print(receiver_name_input)
+                                        print(amount_sent_input)
+                                        print(reference_number_input)
+                                        print('Payment of {} Ghana Cedis has been sent to {} with reference of {}' .format(amount_sent_input,receiver_name_input,reference_number_input))
+                                    else:
+                                        print("Network Timeout")
+                                        
 
 
 
@@ -824,29 +828,53 @@ else:
        elif transfer_money_screen_input == '3':
         send_with_care_screen()
         send_with_care_screen_input = input('User Choice: ')
+        current_time = datetime.now()
+        time_diff = (current_time - start_time).seconds/60
+    
+        if time_diff >= 1:
+            print("Network Timeout")
 
-        if send_with_care_screen_input == '1':
+        else:
+            send_with_care_screen_input == '1'
             enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number: "))
-            repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number: '))
-            if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                    enter_amount_input = float(input('Please enter Amount: '))
-                    send_with_care_reference = input('Enter rererence: ')
-                    print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
             else:
+                repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number: '))
+                if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
+                    enter_amount_input = float(input('Please enter Amount: '))
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
+    
+                    if time_diff >= 1:
+                        print("Network Timeout")
+                    else:
+                        send_with_care_reference = input('Enter rererence: ')
+                        print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
+                else:
                     print("Mobile Number Mismatched")
                     print("Please Try Again")
                     enter_mobile_number_to_send_with_care  = int(input("Please enter recipient mobile number "))
-                    repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
-                    if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
-                        enter_amount_input = float(input('Please enter Amount: '))
-                        send_with_care_reference = input('Enter rererence: ')
-                        print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
-                    else:
-                        current_time = datetime.now()
-                        time_diff = (current_time - start_time).seconds/60
+                    current_time = datetime.now()
+                    time_diff = (current_time - start_time).seconds/60
     
-                        if time_diff >= 1:
-                            print("Network Timeout")
+                    if time_diff >= 1:
+                        print("Network Timeout")
+                    else:
+                        repeat_mobile_number_to_send_with_care =int(input('please repeat recipient number '))
+                        if enter_mobile_number_to_send_with_care==repeat_mobile_number_to_send_with_care:
+                            enter_amount_input = float(input('Please enter Amount: '))
+                            send_with_care_reference = input('Enter rererence: ')
+                            print('Payment of {} Ghana Cedis has been sucessfully sent to +233 {} with reference of {}' .format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
+                        else:
+                            current_time = datetime.now()
+                            time_diff = (current_time - start_time).seconds/60
+    
+                            if time_diff >= 0.005:
+                                print("Network Timeout")
 
 
 

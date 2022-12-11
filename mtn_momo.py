@@ -994,28 +994,42 @@ else:
 
        elif send_with_care_screen_input == '3':
             send_with_care_screen_3()
-            send_with_care_screen_3_input = input('user choice: ') 
-            
-            if send_with_care_screen_3_input == '1':
-                print(' 0.00 balance')
-                print('Thank you')
-                    
-                       elif send_with_care_screen_3_input == '2':
-                        print('not subscribed')
+            send_with_care_screen_3_input = input('user choice: ')
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
 
-                    elif send_with_care_screen_3_input == '3':
+
+            
+            else:
+                if send_with_care_screen_3_input == '1':
+                    print(' 0.00 balance')
+                    print('Thank you')
+                    
+                elif send_with_care_screen_3_input == '2':
+                    print('Not subscribed')
+
+                elif send_with_care_screen_3_input == '3':
                         print('This information is currently not available, please try again later')
 
-                    elif send_with_care_screen_3_input == '4':
-                        print('Sorry, you currently have no claim to this offer contact our customer service to suscribe')
+                elif send_with_care_screen_3_input == '4':
+                    print('Sorry, you currently have no claim to this offer contact our customer service to suscribe')
 
-                    elif send_with_care_screen_3_input == '0':
-                        print('Thank you for using Send With Care') 
+                elif send_with_care_screen_3_input == '0':
+                    print('Thank you for using Send With Care') 
 
 
-        elif send_with_care_screen_input == '3':
+       elif send_with_care_screen_input == '3':
             send_with_care_screen_3()
-            send_with_care_screen_3_input = input('user choice: ') 
+            send_with_care_screen_3_input = input('user choice: ')
+            current_time = datetime.now()
+            time_diff = (current_time - start_time).seconds/60
+    
+            if time_diff >= 1:
+                print("Network Timeout")
+ 
     
             if send_with_care_screen_3_input == '1':
                 print(' 0.00 balance')

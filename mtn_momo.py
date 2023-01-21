@@ -1738,20 +1738,20 @@ else:
 
 
 #allow cashout
-elif home_page_input == '4':
-    allow_cashout_screen()
+    elif home_page_input == '4':
+        allow_cashout_screen()
 
    
 #financial services
-elif home_page_input == '5':
-    print('1. Bank services') 
-    print('2. Savings') 
-    print('3. Loans') 
-    print('4. Pension and Investment') 
-    print('5. Insurance') 
-    print('6. Trade shares') 
-    print('0. Back')
-    financial_services_input = input('input choice: ')
+    elif home_page_input == '5':
+        print('1. Bank services') 
+        print('2. Savings') 
+        print('3. Loans') 
+        print('4. Pension and Investment') 
+        print('5. Insurance') 
+        print('6. Trade shares') 
+        print('0. Back')
+        financial_services_input = input('input choice: ')
        
 
     if financial_services_input== '1':

@@ -596,9 +596,9 @@ def self_reset_input_screen():
                 print('2. Reset Pin')
                 reset_pin_input = input('User Choice: ')
                 if reset_pin_input == '1':
-                   enter_old_mm_pin_code_input =input('Enter old MM Pin Code: ')
-                   enter_new_mm_pin_code_input = input('Enter New MM Pin Code: ')
-                   print('Pin Code has Successfully been changed, Thank You.')
+                    enter_old_mm_pin_code_input =input('Enter old MM Pin Code: ')
+                    enter_new_mm_pin_code_input = input('Enter New MM Pin Code: ')
+                    print('Pin Code has Successfully been changed, Thank You.')
         else: 
             current_time = datetime.now()
             time_diff = (current_time - start_time).seconds/60

@@ -666,26 +666,13 @@ def change_next_of_kin():
             
 
 
- 
-
-    
-
-
-
-
-
-
-
-
-
-
-
 
 
 
             
-    #Main codes  
-         
+#Main codes 
+
+
 home_page()
 home_page_input = input("select choice: ")
 current_time = datetime.now()
@@ -704,29 +691,32 @@ else:
     
         if time_diff >= 1:
             print("Network Timeout")
-        
 
-    
+
+
+
+
+
         else:
-
-
             if transfer_money_screen_input == '1':
                 enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
+                
                 current_time = datetime.now()
                 time_diff = (current_time - start_time).seconds/60
                 if time_diff >= 1:
-                     print("Network Timeout")
+                    print("Network Timeout")
                 else:     
-                     repeat_number_to_transfer_money =int(input('Confirm Number: '))
+                    repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
-    
+
 
 
                 if enter_number_to_transfer_money == repeat_number_to_transfer_money:
                     amount_to_transfer_input = float(input('Enter Amount: '))
+                    
                     current_time = datetime.now()
                     time_diff = (current_time - start_time).seconds/60
-    
+
                     if time_diff >= 1:
                         print("Network Timeout")
                     else:
@@ -738,32 +728,31 @@ else:
                     time_diff = (current_time - start_time).seconds/60
     
                     if time_diff >= 1:
-                      print("Network Timeout")
+                        print("Network Timeout")
 
-              
-
+        
                     else:
                         enter_number_to_transfer_money = int(input('Enter MoMo Number: '))
                         current_time = datetime.now()
                         time_diff = (current_time - start_time).seconds/60
     
                         if time_diff >= 1:
-                             print("Network Timeout")
+                                print("Network Timeout")
                         else:
                             repeat_number_to_transfer_money =int(input('Confirm Number: '))
 
                             if enter_number_to_transfer_money == repeat_number_to_transfer_money:
-                                 amount_to_transfer_input = float(input('Enter Amount: '))
-                                 current_time = datetime.now()
-                                 time_diff = (current_time - start_time).seconds/60
+                                amount_to_transfer_input = float(input('Enter Amount: '))
+                                current_time = datetime.now()
+                                time_diff = (current_time - start_time).seconds/60
     
-                                 if time_diff >= 1:
+                                if time_diff >= 1:
                                     print("Network Timeout")
-                                 else:  
-                                     print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
+                                else:  
+                                    print('Payment of {} Ghana Cedis has been successfully sent to +233 {}' .format(amount_to_transfer_input,enter_number_to_transfer_money))
                                 
 
-                     
+            
             elif transfer_money_screen_input == '2':
                 receiver_name_input = input('Enter Receiver Name: ')
                 current_time = datetime.now()
@@ -773,11 +762,13 @@ else:
                     print("Network Timeout")
                 else:
                     amount_sent_input = float(input('Enter Amount: '))
+
                     current_time = datetime.now()
                     time_diff = (current_time - start_time).seconds/60
     
                     if time_diff >= 1:
                         print("Network Timeout")
+                        
                     else:
                         reference_number_input = input('Enter Reference: ')
                         current_time = datetime.now()

@@ -1,0 +1,2 @@
+print('Payment of {}Ghana Cedis has been sucessfully sent to +233 {} with reference {}'.format(enter_amount_input,enter_mobile_number_to_send_with_care,send_with_care_reference))
+print('Payment of {} Ghana Cedis has been successfully sent to +233 {}'.format(amount_to_transfer_input,enter_number_to_transfer_money))

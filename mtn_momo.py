@@ -385,8 +385,8 @@ def report_fraud_back():
                 elif did_you_send =='0':
                     report_fraud_screen()
                 else:
-                    print('incorrect input')
-                    time()
+                    print('Invalid Input')
+                    
 
     elif report_fraud_input =='3':
         enter_frauster_number = int(input("enter frauster's number: "))
@@ -421,8 +421,8 @@ def report_fraud_back():
                 elif did_you_send =='0':
                     report_fraud_screen()
                 else:
-                    print('incorrect input')
-                    time()
+                    print('Invalid input')
+                    
 
     elif report_fraud_input =='4':
         enter_frauster_number = int(input("enter frauster's number: "))
@@ -455,8 +455,9 @@ def report_fraud_back():
                 elif did_you_send =='0':
                     report_fraud_screen()
                 else:
-                    print('incorrect input')
-                    time()
+                    print('Invalid input')
+                    print('Network Timeout')
+                    
 
     elif report_fraud_input =='5':
         enter_frauster_number = int(input("enter frauster's number: "))
@@ -490,10 +491,10 @@ def report_fraud_back():
                     report_fraud_screen()
                 else:
                     print('incorrect input')
-                    time()
+                    print('Network Timeout')
 
     else:
-        time()
+        print('Incorrect Input')
 
 
 def self_reset_input_screen():
@@ -546,7 +547,7 @@ def self_reset_input_screen():
             elif self_pin_reset_input== '4':
                 print('You do not have recovery number')
             else: 
-                time()
+                print('Incorrect Input')
 
                 
 
@@ -560,7 +561,7 @@ def self_reset_input_screen():
                     enter_new_mm_pin_code_input = input('Enter New MM Pin Code: ')
                     print('Pin Code has Successfully been changed, Thank You.')
         else: 
-            time()
+            print("invalid Input")
 
 
             
@@ -1187,6 +1188,7 @@ if home_page_input == "1":
                     other_amount = float(input('Amount: '))
                     time()
                     other_number = int(input('Enter Number: '))
+                    time()
                     repeat_other_number=int(input('Repeat Number: '))
 
                     if other_number == repeat_other_number:
